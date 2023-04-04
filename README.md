@@ -21,3 +21,5 @@ This is a FrontEnd Test Assesment for VOLTO
 <p>cd volto-test</p>
 <p>npm i</p>
 <p>npm run dev</p>
+
+https://user-images.githubusercontent.com/79547668/229862294-4891ccd9-4abf-43dc-8063-e93bce70a00c.PNG
