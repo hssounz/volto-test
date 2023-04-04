@@ -16,10 +16,9 @@ This is a FrontEnd Test Assesment for VOLTO
 </ul>
 
 <h3>To Run The Project</h3>
-<p>cd test-frontend-volto</p>
-<p>npm i</p>
 <p>cd volto-test</p>
 <p>npm i</p>
+<p>yarn install</p>
 <p>npm run dev</p>
 
 <img src="https://user-images.githubusercontent.com/79547668/229862294-4891ccd9-4abf-43dc-8063-e93bce70a00c.PNG" />
