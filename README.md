@@ -14,3 +14,10 @@ This is a FrontEnd Test Assesment for VOLTO
 <li> -- Faire un calcul. -- </li>
 <li> -- Historique des calculs + Filtrer avec le siret d'une société. -- </li>
 </ul>
+
+<h3>To Run The Project</h3>
+<p>cd test-frontend-volto</p>
+<p>npm i</p>
+<p>cd volto-test</p>
+<p>npm i</p>
+<p>npm run dev</p>
