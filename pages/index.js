@@ -24,12 +24,12 @@ export default function Home() {
   };
   let token, user;
   if (typeof window !== 'undefined') {
-    // Access localStorage here
+    
     token = localStorage.getItem("token");
     user = localStorage.getItem("user");
   }
 
-
+console.log(user);
 
   useEffect(() => {
 
@@ -54,7 +54,7 @@ export default function Home() {
               }
               onClick={() => handlePageChange("ListeSociete")}
             >
-              Liste des Societes
+              Acceuil
             </Link>
           </li>
           <li>
@@ -125,7 +125,7 @@ export default function Home() {
           </li>
         </ul>
       </nav>
-      {activePage === "ListeSociete" && <ListeSociete token={token} handleLogout={handleLogout} />}
+{activePage === "ListeSociete" && <ListeSociete token={token} handleLogout={handleLogout} user={userInfo} />}
       {activePage === "RechercherSociete" && <RechercherSociete token={token} />}
       {activePage === "AjouterSociete" && <AjouterSociete token={token} />}
       {activePage === "EffectuerUnCalcul" && <EffectuerUnCalcul token={token} />}

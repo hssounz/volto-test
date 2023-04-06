@@ -5,7 +5,7 @@ const HistoriqueCalculs = ({ token }) => {
   const [selectedSiret, setSelectedSiret] = useState("");
   const [companies, setCompanies] = useState([]);
 
-  useEffect(() => {
+  const fetchAllCalculs = () => {
     const formData = new FormData();
     formData.append("token", token);
 
@@ -19,9 +19,12 @@ const HistoriqueCalculs = ({ token }) => {
       .then((response) => response.json())
       .then((data) => {
         setCalculs(data.data);
-        console.log(data.data);
       })
       .catch((error) => console.error(error));
+  }
+
+  useEffect(() => {
+    fetchAllCalculs();
   }, [token]);
 
   useEffect(() => {
@@ -40,7 +43,7 @@ const HistoriqueCalculs = ({ token }) => {
   }, [token]);
 
   useEffect(() => {
-    if(selectedSiret.length){
+    if(selectedSiret.length > 0){
         const formData = new FormData();
         formData.append("token", token);
         formData.append("siret", selectedSiret);
@@ -55,9 +58,10 @@ const HistoriqueCalculs = ({ token }) => {
           .then((response) => response.json())
           .then((data) => {
             setCalculs(data.data);
-            console.log(data.data);
           })
           .catch((error) => console.error(error));
+    } else {
+      fetchAllCalculs();
     }
   }, [selectedSiret]);
 

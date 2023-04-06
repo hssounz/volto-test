@@ -77,9 +77,12 @@ select option:hover {
 
 nav{
     display: flex;
-    /* width: 80%; */
     justify-content: space-between;
     padding: 2rem;
+}
+.active{
+    
+    border-bottom: #FFCB35 1px solid;
 }
 .nav-title{
     color: #fff;
@@ -94,6 +97,7 @@ nav{
 .nav-link{
     text-decoration: none;
     color: #FFCB35;
+    padding: .4rem;
 }
 
 
@@ -127,45 +131,49 @@ nav{
 .search-result{
     color: #FFCB35;
 }
-.list-title{
-    display: flex;
-    background-color: #FFCB35;
-    color: #103A5E;
-    justify-content: space-between;
-    padding: 0 10px 0 10px;
-    border-radius: 1rem;
-    margin-top: 1rem;
-}
-.compteurs-list{
-    display: flex;
-    flex-wrap: wrap;
-}
-.companies-list{
-    border: #FFCB35 1px solid;
-    border-radius: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1rem;
-    justify-content: space-between;
-}
-.company-container{
-    padding: 1rem;
+
+.container{
+    padding: .02rem 1rem;
     margin: 1rem;
     border-radius: 1rem;
-    width: fit-content;
-    background-color: #FFCB35;
+    background-color: #103A5E;
+    cursor: pointer;
+    color: #FFCB35 ;
+}
+
+.container2{
+    padding: .02rem 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: #FFCB35  ;
     cursor: pointer;
     color: #103A5E;
 }
 
-.compteur-container{
-    padding: 1rem;
-    margin: 1rem;
+.container-title2{
+    border: #103A5E solid 1px;
+    padding: .2rem 1.2rem;
     border-radius: 1rem;
-    width: fit-content;
-    border: solid 1px #FFCB35;
-    cursor: pointer;
+    width: 80%;
+    font-size: .8rem;
+}
+
+.container-title2 span{
+    font-weight: 600;
+}
+
+.container-title{
+    border: #FFCB35 solid 1px;
+    padding: .2rem 1.2rem;
+    border-radius: 1rem;
+    width: 30%;
+    color: #fff;
+    font-size: .9rem;
+}
+
+.container-title span{
     color: #FFCB35;
+    font-weight: 400;
 }
 
 .calcul-container{
@@ -175,4 +183,57 @@ nav{
     border: 1px solid #FFCB35;
     color: #FFCB35;
     width: fit-content;
+}
+
+.list-title1 {
+    width: 20%;
+    color: #103A5E;
+    border-bottom: #103A5E 1px solid;
+    text-align: center;
+    padding: .2rem;
+}
+
+/**
+* Profile Page Styles
+*/
+
+.profile-page{
+    display: flex;
+    gap: 1rem;
+}
+.left-col{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40%;
+    height: fit-content;
+}
+.right-col{
+    background-color: #FFCB35;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: fit-content;
+    width: 100%;
+}
+.user-details{
+    border: #FFCB35 1px solid;
+    display: flex;
+    align-items:  center;
+    gap: 20px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.user-inf {
+    color: #fff;
+}
+
+.user-inf span {
+    color: #FFCB35;
+}
+
+.mini-history {
+    border: #FFCB35 1px solid;
+    padding: 1rem;
+    border-radius: 1rem;
 }

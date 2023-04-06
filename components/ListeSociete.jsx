@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import CompteursParSociete from "./CompteursParSociete";
+import UserDetails from "./UserDetails";
+import MiniHistory from "./MiniHistory";
+import CompanyContainer from "./CompanyContainer";
 
-const ListeSociete = ({ token, handleLogout }) => {
+const ListeSociete = ({ token, handleLogout, user }) => {
   const [companies, setCompanies] = useState([]);
-
-
+  console.log(user, "tesst");
   useEffect(() => {
     const formData = new FormData();
     formData.append("token", token);
@@ -15,7 +17,7 @@ const ListeSociete = ({ token, handleLogout }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        if(data.error){
+        if (data.error) {
           handleLogout();
         }
         setCompanies(data.data);
@@ -24,20 +26,17 @@ const ListeSociete = ({ token, handleLogout }) => {
   }, [token]);
 
   return (
-    <div className="lists-page">
-        <div className="list-title">
-            <h3>Sociétés : </h3>
-            <h3> : Compteurs</h3>
-        </div>
-      {companies?.map((company) => (
-        <div key={company.id} className="companies-list">
-          <div className="company-container" key={company.id}>
-            <h4>{company.siret}</h4>
-            <h3>{company.RaisonSocial}</h3>
-          </div>
-          <CompteursParSociete token={token} siret={company.siret} />
-        </div>
-      ))}
+    <div className="profile-page">
+      <div className="left-col">
+        <UserDetails user={user} />
+        <MiniHistory token={token} />
+      </div>
+      <div className="right-col">
+      {/* <h4 className="list-title1">Liste des sociétés : </h4> */}
+        {companies?.map((company) => (
+          <CompanyContainer token={token} key={company.id} company={company} />
+        ))}
+      </div>
     </div>
   );
 };
