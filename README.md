@@ -23,7 +23,7 @@ This is a FrontEnd Test Assesment for VOLTO
 
 <img src="https://user-images.githubusercontent.com/79547668/229862294-4891ccd9-4abf-43dc-8063-e93bce70a00c.PNG" />
 <img src="https://user-images.githubusercontent.com/79547668/229862450-8052e4a4-9a07-4175-9a6b-5e2a513b5034.PNG" />
-<img src="https://user-images.githubusercontent.com/79547668/230407367-a87e3aa5-3d56-412a-b61a-8bbaa2a588b2.PNG" />
+<img src="https://user-images.githubusercontent.com/79547668/230409770-86d566ec-e16a-4b17-ab8e-f1d6495179dc.PNG" />
 <img src="https://user-images.githubusercontent.com/79547668/229862491-0a40a84a-b7ae-4e1f-a713-d1003b06c671.PNG" />
 <img src="https://user-images.githubusercontent.com/79547668/229862505-7bfcad1f-513d-4daa-bd3e-900bb54f2d9a.PNG" />
 <img src="https://user-images.githubusercontent.com/79547668/229862520-52f5c3ec-f709-4e6b-991a-cf68ce22dc12.PNG" />
